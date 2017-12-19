@@ -1,99 +1,69 @@
-baseURL = "http://localhost:1313"
-languageCode = "en"
-title = "Hugo Blog"
-theme = "hugo-nuo"
+title = "My cool new Blog"
+baseURL = "https://example.com"
+theme = "bilberry-hugo-theme"
+
 enableRobotsTXT = true
-PygmentsCodeFences = true
-canonifyurls = true
 
-# Disqus Username
-disqusShortname = "disqus_shortname"
+# Change to your content language. Supported values: en, de, es, fr, ru
+DefaultContentLanguage = "en"
 
-# Google Analytics UA number
-googleAnalytics = "UA-XXXXXXXX-X"
+# Enable / Disable Google Analytics statistics for your site
+googleAnalytics = ""
 
-# Copyright of your post
-copyright = "© This post is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License，please give source if you likes to quote or reproduce."
+# Enable / Disable comments on the articles via Disqus.
+disqusShortname = "bilberry-hugo-theme"
 
-# Initial site menu, you can extend menu with content.
-[[menu.main]]
-  name = "Home"
-  weight = 10
-  identifier = "home"
-  url = "/"
-
-[[menu.main]]
-  name = "Works"
-  weight = 20
-  identifier = "works"
-  url = "https://github.com/laozhu"
-
-[[menu.main]]
-  name = "Tags"
-  weight = 30
-  identifier = "tags"
-  url = "/tags/"
-
-# Add your own params here
 [params]
-  author = "Ritchie Zhu"
-  avatar = "/img/avatar.jpg"
-  seotitle = "Hugo Blog (SEO Version)"
-  subtitle = "~ Keep It Simple & Stupid ~"
-  description = "Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
-  paginate = 10
+  # Favicon for the browser's favorites and tabs
+  favicon = "" # set a favicon icon
 
-  # Choose your social networks
-  email = "name@domain.com"
-  github = "github_username"
-  twitter = "twitter_username"
-  linkedin = "linkedin_username"
-  weibo = "weibo_username"
-  wechat= "/img/qrcode.jpg" # Replace with your wechat qrcode image
-  # facebook = "facebook_username"
-  # google = "googlplus_id_number"
-  # instagram = "instagram_username"
-  # youtube = "youtube_username"
-  # vimeo = "vimeo_username"
-  # medium = "medium_username"
-  # quora = "quora_username"
-  # pinterest = "pinterest_username"
-  # dribbble = "dribbble_username"
-  # behance = "behance_username"
-  # jsfiddle = "jsfiddle_username"
-  # codepen = "codepen_username"
-  # zhihu = "zhihu_username"
-  # douban = "douban_username"
-  # bilibili = "bilibili_id_number"
+  # Description and meta data for the search engines
+  author = "Lednerb"
+  description = "Bilberry Premium Theme for Hugo."
+  keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts"
 
-  # Changyan Comments (China Only)
-  changyan = false
-  changyanId = "cyt3toRiB"
-  changyanConf = "prod_0908b1cb9a581501753cce1ed074dbe3"
+  # How many articles should be displayed at once?
+  paginate = 7
 
-  # Google Webmaster
-  # https://www.google.com/webmasters/
-  googleSiteVerification = "_moDmnnBNVLBN1rzNxyGUGdPHE20YgbmrtzLIbxaWFc"
+  # Enable / Disable MathJax
+  enable_mathjax    = false
 
-  # Bing Webmaster
-  # https://www.bing.com/toolbox/webmaster/
-  msValidate = "22596E34341DD1D17D6022C44647E587"
+  # Enable / Disable algolia search
+  algolia_search    = true
+  algolia_appId     = "Y2C4RWMPXW"
+  algolia_apiKey    = "50ea7f8c41c0ad233926e0be2b769ed1"
+  algolia_indexName = "default-content"
 
-  # Baidu Webmaster (China Only)
-  # https://zhanzhang.baidu.com/
-  # baiduSiteVerification = "MZ23SPxxfa"
+  # Header configuration
+    # your subtitle if you want to use any
+    subtitle = "Hello World! This is the most epic subtitle ever."
 
-  # Sogou Webmaster (China Only)
-  # http://zhanzhang.sogou.com/
-  # sogouSiteVerification = "m2jktMQTZm"
+    # if you want to use gravatar for the header image
+    gravatarEMail = ""
 
-  # 360 Webmaster (China Only)
-  # http://zhanzhang.so.com/
-  # soSiteVerification = "b7ab3b4c2edbc856642004d1b8c27a91"
+    # set an path to the image file you want to use | overwrites gravatar
+    customImage = ""
 
-  # Baidu Tongji (China Only)
-  # https://tongji.baidu.com/
-  # baiduTongji = "e21dc1e8a592188271b615159dc88af7"
+    # always display the top navigation (with pages and search) on non-mobile screens
+    permanentTopNav = false
 
-  # ICP Number (China Only)
-  # ICP = "苏ICP备16005986号-2"
+  # social media profile urls for the footer links
+  facebook   = ""
+  twitter    = "https://twitter.com/TheRealLednerb"
+  googleplus = ""
+  pinterest  = ""
+  instagram  = ""
+  tumblr     = ""
+  youtube    = ""
+  vimeo      = ""
+  github     = "https://github.com/Lednerb"
+
+# don't change anything here
+[taxonomies]
+  author   = "author"
+  tag      = "tags"
+  category = "categories"
+
+[outputs]
+  home = [ "HTML", "JSON" ]
+  page = [ "HTML" ]
